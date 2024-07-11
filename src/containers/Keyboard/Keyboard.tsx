@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../app/store";
 import {deleteNumber, increase,checkPin} from "./keyboardSlice";
+import './Keyboard.css'
 import {useState} from "react";
 
 const Keyboard = () => {
@@ -32,7 +33,7 @@ const Keyboard = () => {
         <div className="screen-keyboard border border-secondary bg-dark p-2 pt-5 pb-5">
             <div
                 className={`input-numbers mb-4  ${isCorrect === null ? 'bg-secondary' : isCorrect ? 'bg-success' : 'bg-danger'}`}>
-                {keyboardInput}
+                {keyboardInput.replace(/./g, '*')}
             </div>
             <div className="buttons">
                 {numbers.map((num) => (

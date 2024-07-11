@@ -1,7 +1,6 @@
 import './App.css';
 import Keyboard from "./containers/Keyboard/Keyboard";
 
-
  const App =()=> {
 
     return (
